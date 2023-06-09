@@ -109,19 +109,24 @@ function diaDeLaSemana(numeroDeDia) {
    // Supongamos que los días de la semana se codifican como 1 = Domingo, 2 = Lunes y así sucesivamente.
    // Realiza una función que, dado el número del día de la semana, retorne: "Es fin de semana"
    // si el día corresponde a "Sábado" o "Domingo", y "Es dia laboral" en caso contrario.
-   // Tu código:
+    // Tu código:
+   return numeroDeDia == 1 || numeroDeDia == 7 ? "Es fin de semana" : "Es dia laboral";
 }
 
 function empiezaConNueve(num) {
    // Esta función recibe por parámetro un número.
    // Debe retornar true si el entero inicia con 9 y false en otro caso.
    // Tu código:
+    return num.toString().charAt(0) == 9;
+
 }
 
 function todosIguales(array) {
    // Si todos los elementos del arreglo son iguales, retornar true.
    // Caso contrario retornar false.
    // Tu código:
+    return array.every(element => element === array[0]);
+
 }
 
 function mesesDelAño(array) {
@@ -129,18 +134,34 @@ function mesesDelAño(array) {
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
+    let meses = [];
+    array.forEach(element => {
+        if (element === "Enero" || element === "Marzo" || element === "Noviembre") meses.push(element);
+    });
+    return meses.length === 3 ? meses : "No se encontraron los meses pedidos";
 }
 
 function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
    // Tu código:
+    let tabla = [];
+    for (let i = 0; i <= 10; i++) {
+        tabla.push(6 * i);
+    }
+    return tabla;
+
 }
 
 function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
    // Tu código:
+    let mayores = [];
+    array.forEach(element => {
+        if (element > 100) mayores.push(element);
+    });
+    return mayores;
 }
 
 /* ----------------------------------------------------------------------------------
